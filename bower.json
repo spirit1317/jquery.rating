@@ -1,0 +1,24 @@
+{
+  "name": "jquery.rating",
+  "main": "jquery.rating.js",
+  "homepage": "https://github.com/podio/jquery.rating",
+  "authors": [
+    "Søren Brokær <root@srn.io>",
+    "Peter Müller <munter@fumle.dk>"
+  ],
+  "description": "Turns a select input element into a rating control.",
+  "keywords": [
+    "jquery.rating",
+    "jquery-rating",
+    "jquery",
+    "rating"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
