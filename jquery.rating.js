@@ -10,10 +10,15 @@
 // Also fixed it so on a new page load it will properly populate the stars as they should be.
 //
 //
-
-//Keeps '$' pointing to the jQuery version
-(function ($) {
-
+(function (factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['jquery'], factory);
+  } else {
+    // Browser globals
+    factory(jQuery);
+  }
+}(function ($) {
   $.fn.rating = function(options)
   {
     //
@@ -215,5 +220,4 @@
     });
 
   };
-
-})(jQuery);
+}));
