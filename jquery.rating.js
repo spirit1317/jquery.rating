@@ -22,8 +22,7 @@
   }
 }(function ($) {
 
-  $.fn.rating = function(options)
-  {
+  $.fn.rating = function(options) {
     var settings = {
       showCancel: true,
       cancelValue: null,
@@ -103,7 +102,12 @@
         //Set a new target and let the method know the select has already changed.
         var evt = {"target": null, "data": {}};
 
-        evt.target = $(".ui-rating-star[data-value="+ value +"]", container);
+        evt.target = value === "" ? void 0 : $(".ui-rating-star[data-value="+ value +"]", container);
+
+        if (evt.target === void 0) {
+          return;
+        }
+
         evt.data.selectBox = selectBox;
         evt.data.hasChanged = true;
         methods.click(evt);
