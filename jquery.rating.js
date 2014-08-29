@@ -33,7 +33,7 @@
           elm.addClass("ui-rating-cancel-full");
         }
         else {
-          elm.prevAll().andSelf()
+          elm.prevAll().addBack()
               .not(".ui-rating-cancel")
               .addClass("ui-rating-hover");
         }
@@ -46,7 +46,7 @@
               .removeClass("ui-rating-cancel-full");
         }
         else {
-          elm.prevAll().andSelf()
+          elm.prevAll().addBack()
               .not(".ui-rating-cancel")
               .removeClass("ui-rating-hover");
         }
@@ -61,7 +61,7 @@
         }
         else {
           //Set us, and the stars before us as full
-          elm.closest(".ui-rating-star").prevAll().andSelf()
+          elm.closest(".ui-rating-star").prevAll().addBack()
               .not(".ui-rating-cancel")
               .prop("class", "ui-rating-star ui-rating-full");
           //Set the stars after us as empty
